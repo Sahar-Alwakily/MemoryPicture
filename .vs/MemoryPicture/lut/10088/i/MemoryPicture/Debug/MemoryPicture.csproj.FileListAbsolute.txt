@@ -12,3 +12,4 @@ C:\Users\User\source\repos\MemoryPicture\.vs\MemoryPicture\lut\0\i\MemoryPicture
 C:\Users\User\source\repos\MemoryPicture\.vs\MemoryPicture\lut\0\i\MemoryPicture\Debug\MemoryPicture.csproj.CoreCompileInputs.cache
 C:\Users\User\source\repos\MemoryPicture\.vs\MemoryPicture\lut\0\i\MemoryPicture\Debug\MemoryPicture.csproj.CopyComplete
 C:\Users\User\source\repos\MemoryPicture\.vs\MemoryPicture\lut\0\i\MemoryPicture\Debug\MemoryPicture.exe
+C:\Users\User\source\repos\MemoryPicture\.vs\MemoryPicture\lut\0\i\MemoryPicture\Debug\MemoryPicture.csprojAssemblyReference.cache
