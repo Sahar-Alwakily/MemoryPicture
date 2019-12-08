@@ -1,0 +1,13 @@
+C:\Users\User\source\repos\MemoryPicture\MemoryPicture\bin\Debug\MemoryPicture.exe.config
+C:\Users\User\source\repos\MemoryPicture\MemoryPicture\bin\Debug\MemoryPicture.exe
+C:\Users\User\source\repos\MemoryPicture\MemoryPicture\bin\Debug\MemoryPicture.pdb
+C:\Users\User\source\repos\MemoryPicture\MemoryPicture\obj\Debug\MemoryPicture.csprojAssemblyReference.cache
+C:\Users\User\source\repos\MemoryPicture\MemoryPicture\obj\Debug\MemoryPicture.Form1.resources
+C:\Users\User\source\repos\MemoryPicture\MemoryPicture\obj\Debug\MemoryPicture.Properties.Resources.resources
+C:\Users\User\source\repos\MemoryPicture\MemoryPicture\obj\Debug\MemoryPicture.csproj.GenerateResource.cache
+C:\Users\User\source\repos\MemoryPicture\MemoryPicture\obj\Debug\MemoryPicture.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\MemoryPicture\MemoryPicture\obj\Debug\MemoryPicture.exe
+C:\Users\User\source\repos\MemoryPicture\MemoryPicture\obj\Debug\MemoryPicture.pdb
+C:\Users\User\source\repos\MemoryPicture\MemoryPicture\obj\Debug\MemoryPicture.login.resources
+C:\Users\User\source\repos\MemoryPicture\MemoryPicture\bin\Debug\memorysql.accdb
+C:\Users\User\source\repos\MemoryPicture\MemoryPicture\obj\Debug\MemoryPicture.lists.resources
