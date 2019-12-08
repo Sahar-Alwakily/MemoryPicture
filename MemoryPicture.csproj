@@ -52,6 +52,24 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="HelpGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpGame.Designer.cs">
+      <DependentUpon>HelpGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="levels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="levels.Designer.cs">
+      <DependentUpon>levels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listpoint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listpoint.Designer.cs">
+      <DependentUpon>listpoint.cs</DependentUpon>
+    </Compile>
     <Compile Include="lists.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,10 +87,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>memorysqlDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpGame.resx">
+      <DependentUpon>HelpGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="levels.resx">
+      <DependentUpon>levels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listpoint.resx">
+      <DependentUpon>listpoint.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="lists.resx">
       <DependentUpon>lists.cs</DependentUpon>

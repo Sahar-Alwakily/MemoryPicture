@@ -34,17 +34,19 @@
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxuserlog = new System.Windows.Forms.TextBox();
+            this.textBoxpasslog = new System.Windows.Forms.TextBox();
+            this.btnlogin = new System.Windows.Forms.Button();
+            this.usernamelog = new System.Windows.Forms.Label();
+            this.passlog = new System.Windows.Forms.Label();
+            this.nameup = new System.Windows.Forms.Label();
+            this.usernameup = new System.Windows.Forms.Label();
+            this.sigupbtn = new System.Windows.Forms.Button();
+            this.textBoxname = new System.Windows.Forms.TextBox();
+            this.boxusername = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.passup = new System.Windows.Forms.Label();
+            this.textBoxpassup = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -69,6 +71,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "הרשמה";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -103,102 +106,113 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // textBox1
+            // textBoxuserlog
             // 
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(416, 158);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(165, 36);
-            this.textBox1.TabIndex = 5;
+            this.textBoxuserlog.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxuserlog.Location = new System.Drawing.Point(416, 158);
+            this.textBoxuserlog.Name = "textBoxuserlog";
+            this.textBoxuserlog.Size = new System.Drawing.Size(165, 36);
+            this.textBoxuserlog.TabIndex = 5;
+            this.textBoxuserlog.Visible = false;
             // 
-            // textBox2
+            // textBoxpasslog
             // 
-            this.textBox2.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(416, 225);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(165, 36);
-            this.textBox2.TabIndex = 6;
+            this.textBoxpasslog.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxpasslog.Location = new System.Drawing.Point(416, 225);
+            this.textBoxpasslog.Name = "textBoxpasslog";
+            this.textBoxpasslog.Size = new System.Drawing.Size(165, 36);
+            this.textBoxpasslog.TabIndex = 6;
+            this.textBoxpasslog.Visible = false;
             // 
-            // button5
+            // btnlogin
             // 
-            this.button5.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(422, 278);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(159, 52);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "כניסה";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnlogin.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlogin.Location = new System.Drawing.Point(422, 278);
+            this.btnlogin.Name = "btnlogin";
+            this.btnlogin.Size = new System.Drawing.Size(159, 52);
+            this.btnlogin.TabIndex = 7;
+            this.btnlogin.Text = "כניסה";
+            this.btnlogin.UseVisualStyleBackColor = true;
+            this.btnlogin.Visible = false;
             // 
-            // label1
+            // usernamelog
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(600, 158);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 25);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "שם משתמש";
+            this.usernamelog.AutoSize = true;
+            this.usernamelog.BackColor = System.Drawing.Color.Transparent;
+            this.usernamelog.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernamelog.Location = new System.Drawing.Point(600, 158);
+            this.usernamelog.Name = "usernamelog";
+            this.usernamelog.Size = new System.Drawing.Size(137, 25);
+            this.usernamelog.TabIndex = 8;
+            this.usernamelog.Text = "שם משתמש";
+            this.usernamelog.Visible = false;
             // 
-            // label2
+            // passlog
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(600, 225);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 25);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "סיסמה";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.passlog.AutoSize = true;
+            this.passlog.BackColor = System.Drawing.Color.Transparent;
+            this.passlog.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passlog.Location = new System.Drawing.Point(600, 225);
+            this.passlog.Name = "passlog";
+            this.passlog.Size = new System.Drawing.Size(85, 25);
+            this.passlog.TabIndex = 9;
+            this.passlog.Text = "סיסמה";
+            this.passlog.Visible = false;
+            this.passlog.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label3
+            // nameup
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(600, 404);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 25);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "סיסמה";
+            this.nameup.AutoSize = true;
+            this.nameup.BackColor = System.Drawing.Color.Transparent;
+            this.nameup.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameup.Location = new System.Drawing.Point(600, 404);
+            this.nameup.Name = "nameup";
+            this.nameup.Size = new System.Drawing.Size(46, 25);
+            this.nameup.TabIndex = 14;
+            this.nameup.Text = "שם";
+            this.nameup.Visible = false;
             // 
-            // label4
+            // usernameup
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(600, 337);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(137, 25);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "שם משתמש";
+            this.usernameup.AutoSize = true;
+            this.usernameup.BackColor = System.Drawing.Color.Transparent;
+            this.usernameup.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameup.Location = new System.Drawing.Point(600, 337);
+            this.usernameup.Name = "usernameup";
+            this.usernameup.Size = new System.Drawing.Size(137, 25);
+            this.usernameup.TabIndex = 13;
+            this.usernameup.Text = "שם משתמש";
+            this.usernameup.Visible = false;
             // 
-            // button6
+            // sigupbtn
             // 
-            this.button6.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(422, 457);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(159, 52);
-            this.button6.TabIndex = 12;
-            this.button6.Text = "הרשמה";
-            this.button6.UseVisualStyleBackColor = true;
+            this.sigupbtn.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sigupbtn.Location = new System.Drawing.Point(416, 539);
+            this.sigupbtn.Name = "sigupbtn";
+            this.sigupbtn.Size = new System.Drawing.Size(159, 52);
+            this.sigupbtn.TabIndex = 12;
+            this.sigupbtn.Text = "הרשמה";
+            this.sigupbtn.UseVisualStyleBackColor = true;
+            this.sigupbtn.Visible = false;
+            this.sigupbtn.Click += new System.EventHandler(this.sigupbtn_Click);
             // 
-            // textBox3
+            // textBoxname
             // 
-            this.textBox3.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(416, 404);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(165, 36);
-            this.textBox3.TabIndex = 11;
+            this.textBoxname.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxname.Location = new System.Drawing.Point(416, 404);
+            this.textBoxname.Name = "textBoxname";
+            this.textBoxname.Size = new System.Drawing.Size(165, 36);
+            this.textBoxname.TabIndex = 11;
+            this.textBoxname.Visible = false;
             // 
-            // textBox4
+            // boxusername
             // 
-            this.textBox4.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(416, 337);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(165, 36);
-            this.textBox4.TabIndex = 10;
+            this.boxusername.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxusername.Location = new System.Drawing.Point(416, 337);
+            this.boxusername.Name = "boxusername";
+            this.boxusername.Size = new System.Drawing.Size(165, 36);
+            this.boxusername.TabIndex = 10;
+            this.boxusername.Visible = false;
             // 
             // pictureBox2
             // 
@@ -211,23 +225,46 @@
             this.pictureBox2.TabIndex = 15;
             this.pictureBox2.TabStop = false;
             // 
+            // passup
+            // 
+            this.passup.AutoSize = true;
+            this.passup.BackColor = System.Drawing.Color.Transparent;
+            this.passup.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passup.Location = new System.Drawing.Point(600, 475);
+            this.passup.Name = "passup";
+            this.passup.Size = new System.Drawing.Size(85, 25);
+            this.passup.TabIndex = 17;
+            this.passup.Text = "סיסמה";
+            this.passup.Visible = false;
+            // 
+            // textBoxpassup
+            // 
+            this.textBoxpassup.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxpassup.Location = new System.Drawing.Point(416, 475);
+            this.textBoxpassup.Name = "textBoxpassup";
+            this.textBoxpassup.Size = new System.Drawing.Size(165, 36);
+            this.textBoxpassup.TabIndex = 16;
+            this.textBoxpassup.Visible = false;
+            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.passup);
+            this.Controls.Add(this.textBoxpassup);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.nameup);
+            this.Controls.Add(this.usernameup);
+            this.Controls.Add(this.sigupbtn);
+            this.Controls.Add(this.textBoxname);
+            this.Controls.Add(this.boxusername);
+            this.Controls.Add(this.passlog);
+            this.Controls.Add(this.usernamelog);
+            this.Controls.Add(this.btnlogin);
+            this.Controls.Add(this.textBoxpasslog);
+            this.Controls.Add(this.textBoxuserlog);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button3);
@@ -250,16 +287,18 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxuserlog;
+        private System.Windows.Forms.TextBox textBoxpasslog;
+        private System.Windows.Forms.Button btnlogin;
+        private System.Windows.Forms.Label usernamelog;
+        private System.Windows.Forms.Label passlog;
+        private System.Windows.Forms.Label nameup;
+        private System.Windows.Forms.Label usernameup;
+        private System.Windows.Forms.Button sigupbtn;
+        private System.Windows.Forms.TextBox textBoxname;
+        private System.Windows.Forms.TextBox boxusername;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label passup;
+        private System.Windows.Forms.TextBox textBoxpassup;
     }
 }
