@@ -16,7 +16,7 @@ namespace MemoryPicture
     public partial class login : Form
     {
 
-        public string path = @"..\..\memorysql.accdb";
+        public string path = @"..\..\database\memorypic.accdb";
         OleDbConnection connection = new OleDbConnection();
 
 
@@ -56,7 +56,6 @@ namespace MemoryPicture
             textBoxuserlog.Visible = true;
             btnlogin.Visible = true;
             button1.Visible = false;
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -72,64 +71,7 @@ namespace MemoryPicture
             button2.Visible = false;
         }
 
-        private void sigupbtn_Click(object sender, EventArgs e)
-        {
-            OleDbConnection con = new OleDbConnection("Provider = Microsoft.ACE.OLEDB.12.0; Data Source = " + path);
-            OleDbCommand cmdoledb = new OleDbCommand();
-            con.Open();
-            try{
-                OleDbCommand cmd = new OleDbCommand("INSERT INTO accunt (username,password,name) VALUES ('" + boxusername.Text.ToString() + "','" + textBoxpassup.ToString() + "','" + textBoxname.ToString() + "')", con);
 
-                // OleDbCommand cmd = new OleDbCommand("INSERT INTO accunt(username,password,name) values(@username,@password,@name)", con);
-                //  cmd.Parameters.AddWithValue("@username", boxusername.Text);
-                // cmd.Parameters.AddWithValue("@password", textBoxpassup.Text);
-                //  cmd.Parameters.AddWithValue("@name", textBoxname.Text);
-
-
-                cmd.ExecuteNonQuery();
-                con.Close();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("not login up" + ex);
-            }
-            
-
-
-
-
-
-
-
-
-
-
-
-            /* string constr = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path;
-             connection.ConnectionString = constr;
-             // OleDbConnection conn = new OleDbConnection(constr);
-             try
-             {
-
-                 connection.Open();
-                 OleDbCommand commed = new OleDbCommand(constr);
-                 commed.Connection = connection;
-                // OleDbCommand cmd = new OleDbCommand("INSERT INTO Members(username,password,name) values('" + boxusername.Text + "','" + textBoxpassup.Text + "','" + textBoxname.Text + "')", con);
-
-                 commed.CommandText = "INSERT INTO accunt(username,password,name)VALUES('" + boxusername.Text.ToString() + "','" + textBoxpassup.Text.ToString() + "','" + textBoxname.Text.ToString() + "')";
-                 commed.ExecuteNonQuery();
-                 MessageBox.Show("Done :)");
-               //  string sql = "select * from accunt";
-               //OleDbDataAdapter sda = new OleDbDataAdapter(sql, conn);
-               //   DataSet ds = new DataSet();
-               //sda.Fill(ds);
-
-             }
-             catch(Exception ex)
-             {
-                 MessageBox.Show("not login up"+ex);
-             }*/
-        }
+       
     }
-}
+ }
