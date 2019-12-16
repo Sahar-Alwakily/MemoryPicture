@@ -71,7 +71,70 @@ namespace MemoryPicture
             button2.Visible = false;
         }
 
+        private void btnlogin_Click(object sender, EventArgs e)
+        {
+            OleDbConnection con = new OleDbConnection("Provider = Microsoft.ACE.OLEDB.12.0; Data Source = " + path);
+            OleDbCommand cmdoledb = con.CreateCommand();
+            OleDbDataAdapter da;
+            DataTable dt = new DataTable();
+            con.Open();
 
-       
+
+            da = new OleDbDataAdapter("select * from player where username='" + textBoxuserlog.Text + "' and pas='" + textBoxpasslog.Text + "'", con);
+
+            try
+            {
+                da.Fill(dt);
+                if (dt.Rows.Count <= 0)
+                {
+
+                }
+                else if (dt.Rows.Count > 0)
+                {
+                    MessageBox.Show("Login Succsufully");
+                    this.Hide();
+                    lists f1 = new lists();
+                    f1.Show();
+                }
+                else MessageBox.Show("password or username false");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+            }
+            dt.Clear();
+        
+    }
+
+        private void sigupbtn_Click(object sender, EventArgs e)
+        {
+            OleDbConnection con = new OleDbConnection("Provider = Microsoft.ACE.OLEDB.12.0; Data Source = " + path);
+            OleDbCommand cmdoledb = con.CreateCommand();
+            con.Open();
+
+            String name = textBoxname.Text.ToString();
+            String username = boxusername.Text.ToString();
+            String pass = textBoxpassup.Text.ToString();
+            String my_querry = ("INSERT INTO player(name,username,pas) VALUES ('" + name + "','" + username + "','" + pass + "')");
+
+            try
+            {
+                OleDbCommand cmd = new OleDbCommand(my_querry, con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("success ..");
+                this.Hide();
+                lists f1 = new lists();
+                f1.Show();
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            con.Close();
+        }
     }
  }

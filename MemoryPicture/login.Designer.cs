@@ -134,7 +134,7 @@
             this.btnlogin.Text = "כניסה";
             this.btnlogin.UseVisualStyleBackColor = true;
             this.btnlogin.Visible = false;
-//            this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
+            this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
             // usernamelog
             // 
@@ -195,7 +195,7 @@
             this.sigupbtn.Text = "הרשמה";
             this.sigupbtn.UseVisualStyleBackColor = true;
             this.sigupbtn.Visible = false;
-       //     this.sigupbtn.Click += new System.EventHandler(this.sigupbtn_Click);
+            this.sigupbtn.Click += new System.EventHandler(this.sigupbtn_Click);
             // 
             // textBoxname
             // 
