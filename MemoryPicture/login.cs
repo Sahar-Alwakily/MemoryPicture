@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.OleDb;
-
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -15,11 +14,6 @@ namespace MemoryPicture
 {
     public partial class login : Form
     {
-
-        public string path = @"..\..\database\memorypic.accdb";
-        OleDbConnection connection = new OleDbConnection();
-
-
         public login()
         {
             InitializeComponent();
@@ -50,91 +44,13 @@ namespace MemoryPicture
 
         private void button1_Click(object sender, EventArgs e)
         {
-            passlog.Visible = true;
-            usernamelog.Visible = true;
-            textBoxpasslog.Visible = true;
-            textBoxuserlog.Visible = true;
-            btnlogin.Visible = true;
-            button1.Visible = false;
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-            usernameup.Visible = true;
-            nameup.Visible = true;
-            passup.Visible = true;
-            boxusername.Visible = true;
-            textBoxname.Visible = true;
-            textBoxpassup.Visible = true;
-            sigupbtn.Visible = true;
-            button2.Visible = false;
-        }
-
-        private void btnlogin_Click(object sender, EventArgs e)
-        {
-            OleDbConnection con = new OleDbConnection("Provider = Microsoft.ACE.OLEDB.12.0; Data Source = " + path);
-            OleDbCommand cmdoledb = con.CreateCommand();
-            OleDbDataAdapter da;
-            DataTable dt = new DataTable();
-            con.Open();
-
-
-            da = new OleDbDataAdapter("select * from player where username='" + textBoxuserlog.Text + "' and pas='" + textBoxpasslog.Text + "'", con);
-
-            try
-            {
-                da.Fill(dt);
-                if (dt.Rows.Count <= 0)
-                {
-
-                }
-                else if (dt.Rows.Count > 0)
-                {
-                    MessageBox.Show("Login Succsufully");
-                    this.Hide();
-                    lists f1 = new lists();
-                    f1.Show();
-                }
-                else MessageBox.Show("password or username false");
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("" + ex);
-            }
-            dt.Clear();
-        
-    }
-
-        private void sigupbtn_Click(object sender, EventArgs e)
-        {
-            OleDbConnection con = new OleDbConnection("Provider = Microsoft.ACE.OLEDB.12.0; Data Source = " + path);
-            OleDbCommand cmdoledb = con.CreateCommand();
-            con.Open();
-
-            String name = textBoxname.Text.ToString();
-            String username = boxusername.Text.ToString();
-            String pass = textBoxpassup.Text.ToString();
-            String my_querry = ("INSERT INTO player(name,username,pas) VALUES ('" + name + "','" + username + "','" + pass + "')");
-
-            try
-            {
-                OleDbCommand cmd = new OleDbCommand(my_querry, con);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("success ..");
-                this.Hide();
-                lists f1 = new lists();
-                f1.Show();
-
-
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            con.Close();
+            string connetionString;
+            SqlConnection cnn;
+            connetionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\memorysql.accdb;Persist Security Info=True;jet OLEDB:Database Password=1234";
+            cnn = new SqlConnection(connetionString);
+            cnn.Open();
+            MessageBox.Show("Connection Open  !");
+            cnn.Close();
         }
     }
- }
+}

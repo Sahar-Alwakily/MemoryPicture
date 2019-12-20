@@ -25,11 +25,7 @@ namespace MemoryPicture
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            lists li = new lists();
-            li.Show();
-
-
+            this.Close();
         }
 
         private void Form1_Load(object sender, EventArgs e)

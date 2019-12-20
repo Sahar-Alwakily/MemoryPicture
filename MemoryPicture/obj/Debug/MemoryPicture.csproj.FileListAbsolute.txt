@@ -11,6 +11,3 @@ C:\Users\User\source\repos\MemoryPicture\MemoryPicture\obj\Debug\MemoryPicture.p
 C:\Users\User\source\repos\MemoryPicture\MemoryPicture\obj\Debug\MemoryPicture.login.resources
 C:\Users\User\source\repos\MemoryPicture\MemoryPicture\bin\Debug\memorysql.accdb
 C:\Users\User\source\repos\MemoryPicture\MemoryPicture\obj\Debug\MemoryPicture.lists.resources
-C:\Users\User\source\repos\MemoryPicture\MemoryPicture\obj\Debug\MemoryPicture.listpoint.resources
-C:\Users\User\source\repos\MemoryPicture\MemoryPicture\obj\Debug\MemoryPicture.HelpGame.resources
-C:\Users\User\source\repos\MemoryPicture\MemoryPicture\obj\Debug\MemoryPicture.levels.resources
