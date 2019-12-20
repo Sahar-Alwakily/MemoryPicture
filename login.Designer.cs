@@ -120,6 +120,7 @@
             this.textBoxpasslog.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxpasslog.Location = new System.Drawing.Point(416, 225);
             this.textBoxpasslog.Name = "textBoxpasslog";
+            this.textBoxpasslog.PasswordChar = '*';
             this.textBoxpasslog.Size = new System.Drawing.Size(165, 36);
             this.textBoxpasslog.TabIndex = 6;
             this.textBoxpasslog.Visible = false;
@@ -134,6 +135,7 @@
             this.btnlogin.Text = "כניסה";
             this.btnlogin.UseVisualStyleBackColor = true;
             this.btnlogin.Visible = false;
+            this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
             // usernamelog
             // 

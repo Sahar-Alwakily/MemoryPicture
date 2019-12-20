@@ -14,3 +14,7 @@ C:\Users\User\source\repos\MemoryPicture\MemoryPicture\obj\Debug\MemoryPicture.l
 C:\Users\User\source\repos\MemoryPicture\MemoryPicture\obj\Debug\MemoryPicture.listpoint.resources
 C:\Users\User\source\repos\MemoryPicture\MemoryPicture\obj\Debug\MemoryPicture.HelpGame.resources
 C:\Users\User\source\repos\MemoryPicture\MemoryPicture\obj\Debug\MemoryPicture.levels.resources
+C:\Users\User\source\repos\MemoryPicture\MemoryPicture\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\User\source\repos\MemoryPicture\MemoryPicture\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\User\source\repos\MemoryPicture\MemoryPicture\obj\Debug\MemoryPicture.Profile.resources
+C:\Users\User\source\repos\MemoryPicture\MemoryPicture\obj\Debug\MemoryPicture.csproj.CopyComplete

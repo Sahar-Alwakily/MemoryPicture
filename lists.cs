@@ -16,7 +16,12 @@ namespace MemoryPicture
         {
             InitializeComponent();
         }
+        public lists(String username)
+        {
+            InitializeComponent();
+            name.Text = username;
 
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             button9.Visible = true;
@@ -90,6 +95,13 @@ namespace MemoryPicture
         {
             this.Hide();
             Form1 f1 = new Form1();
+            f1.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Profile f1 = new Profile(name.Text);
             f1.Show();
         }
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ namespace MemoryPicture
 {
     public partial class listpoint : Form
     {
-        public string path = @"..\..\memorysql.accdb";
+        public string path = @"..\..\database\memorypic.accdb";
 
         public listpoint()
         {
@@ -43,15 +44,15 @@ namespace MemoryPicture
             {
 
                 conn.Open();
-                string sql = "select * from accunt";
+                string sql = "select name,point from player";
                 OleDbDataAdapter sda = new OleDbDataAdapter(sql, conn);
                 DataSet ds = new DataSet();
                 sda.Fill(ds);
 
                 dataGridView1.DataSource = ds.Tables[0];
-                dataGridView1.Columns[0].HeaderText = "id";
-                dataGridView1.Columns[1].HeaderText = "name";
-                dataGridView1.Columns[2].HeaderText = "point";
+                dataGridView1.Columns[0].HeaderText = "name";
+                dataGridView1.Columns[1].HeaderText = "point";
+               // dataGridView1.Columns[2].HeaderText = "point";
 
                 dataGridView1.ReadOnly = true;
                 dataGridView1.AllowUserToAddRows = false;
