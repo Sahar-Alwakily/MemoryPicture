@@ -1,0 +1,160 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace MemoryPicture
+{
+    public partial class Form1 : Form
+    {
+        Image upPicture = Image.FromFile(@"..\..\pictures\\uppic.jpg");
+
+        Image DicePlay = Image.FromFile(@"..\..\pictures\\DicePlay.gif");
+        Image Dice1 = Image.FromFile(@"..\..\pictures\\dice1.png");
+        Image Dice2 = Image.FromFile(@"..\..\pictures\\dice2.png");
+        Image Dice3 = Image.FromFile(@"..\..\pictures\\dice3.png");
+        Image Dice4 = Image.FromFile(@"..\..\pictures\\dice4.png");
+        Image Dice5 = Image.FromFile(@"..\..\pictures\\dice5.png");
+        Image Dice6 = Image.FromFile(@"..\..\pictures\\dice6.png");
+
+        Image level11 = Image.FromFile(@"..\..\pictures\\level1-1.png");
+        Image level12 = Image.FromFile(@"..\..\pictures\\level1-2.png");
+        Image level13 = Image.FromFile(@"..\..\pictures\\level1-3.png");
+        Image level14 = Image.FromFile(@"..\..\pictures\\level1-4.png");
+        Image level15 = Image.FromFile(@"..\..\pictures\\level1-5.png");
+        Image level16 = Image.FromFile(@"..\..\pictures\\level1-6.png");
+        Image level17 = Image.FromFile(@"..\..\pictures\\level1-7.png");
+        Image level18 = Image.FromFile(@"..\..\pictures\\level1-8.png");
+        Image level19 = Image.FromFile(@"..\..\pictures\\level1-9.png");
+        Image level110 = Image.FromFile(@"..\..\pictures\\level1-10.png");
+
+
+        Random rnd = new Random();
+
+
+
+        public Form1()
+        { 
+            InitializeComponent();
+        }
+        public Form1(String name)
+        {
+
+            InitializeComponent();
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            timerDice.Stop();
+
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+
+            DialogResult result = MessageBox.Show("Are u reday for Game :) ");
+            if(result == DialogResult.OK)
+            {
+                StartGame();
+            }
+
+        }
+
+        private void StartGame()
+        {
+            PICtimer.Visible = true;
+            picture.Image = level11;
+            timerDice.Stop();
+            timerpic.Start();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox14_Click(object sender, EventArgs e)
+        {
+            leblClick.Visible = false;
+            Dice.Image = DicePlay;
+            timerDice.Start();
+            
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+            PICtimer.Visible = false;
+            picture.Image = upPicture;
+            timerpic.Stop();
+            leblClick.Visible = true;
+        }
+
+        private void timerDice_Tick(object sender, EventArgs e)
+        {
+            int rn=rnd.Next(0, 7);
+            switch (rn)
+            {
+                case 1:
+                    Dice.Image = Dice1;
+                    QBox1.Visible = false;
+                    Qlabel1.Text = "Questions1";
+                    ShowQuestion(rn);
+                    break;
+                case 2:
+                    Dice.Image = Dice2;
+                    QBox2.Visible = false;
+                    Qlabel2.Text = "Questions2";
+                    ShowQuestion(rn);
+                    break;
+                case 3:
+                    Dice.Image = Dice3;
+                    QBox3.Visible = false;
+                    Qlabel3.Text = "Questions3";
+                    break;
+                case 4:
+                    Dice.Image = Dice4;
+                    QBox4.Visible = false;
+                    Qlabel4.Text = "Questions4";
+                    ShowQuestion(rn);
+                    break;
+                case 5:
+                    Dice.Image = Dice5;
+                    QBox5.Visible = false;
+                    Qlabel5.Text = "Questions5";
+                    ShowQuestion(rn);
+                    break;
+                case 6:
+                    Dice.Image = Dice6;
+                    QBox6.Visible = false;
+                    Qlabel6.Text = "Questions6";
+                    ShowQuestion(rn);
+                    break;
+            }
+            timerDice.Stop();
+        }
+
+        private void ShowQuestion(int rn)
+        {
+
+
+        }
+    }
+}
