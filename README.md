@@ -2,6 +2,7 @@
 המשחק נכתב בקוד C#  על יד קבוצה 11 בתוכנה visual Stidio  במסך .Net Windows Form 
 
 הניחיות הערות כלליות של משחק Memory Picture:
+
 •	המשחק מעל גיל  6 .
 
 •	המשחק עוזר לזיכרון ילדים.
@@ -28,6 +29,7 @@
 
 
 הגדרה לחיבור בסיס נתונים :
+
 •	החיבור בשם ישום Microsoft Access 2016   
 
 •	המשחק עובד רק ב תבנית קובץ  office system driver data connectivity 2007   
