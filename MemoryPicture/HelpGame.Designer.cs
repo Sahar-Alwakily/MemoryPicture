@@ -37,17 +37,18 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(242, 29);
+            this.pictureBox1.Location = new System.Drawing.Point(-6, -38);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(849, 708);
+            this.pictureBox1.Size = new System.Drawing.Size(1376, 787);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.Yellow;
             this.btnBack.Font = new System.Drawing.Font("Tahoma", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(22, 29);
+            this.btnBack.Location = new System.Drawing.Point(53, 46);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(123, 54);
             this.btnBack.TabIndex = 1;
@@ -60,12 +61,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Yellow;
-            this.ClientSize = new System.Drawing.Size(1239, 749);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.pictureBox1);
             this.Name = "HelpGame";
             this.Text = "HelpGame";
-            this.Load += new System.EventHandler(this.HelpGame_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

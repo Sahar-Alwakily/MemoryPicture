@@ -12,23 +12,27 @@ namespace MemoryPicture
 {
     public partial class HelpGame : Form
     {
+     //   Image helpgame = Image.FromFile(@"..\..\pictures\\helpgame.png");
+
         public HelpGame()
         {
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+
+            //   pictureBox1.Image = helpgame;
             InitializeComponent();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            lists l = new lists();
-            l.Show();
-
-        }
-
-        private void HelpGame_Load(object sender, EventArgs e)
-        {
-            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.WindowState = FormWindowState.Maximized;
+            lists ls = new lists();
+            ls.Show();
         }
     }
 }

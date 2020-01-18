@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.OleDb;
-
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,101 +10,138 @@ using System.Windows.Forms;
 
 namespace MemoryPicture
 {
-
-
     public partial class levels : Form
     {
-
-        player pl = new player("d", "s", 100);
-        public string path = @"..\..\memorysql.accdb";
+        Image LevelLock = Image.FromFile(@"..\..\pictures\\lock.png");
+        int level;
         public levels()
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        public levels(int lvl)
         {
-            this.Hide();
-            Form1 lp = new Form1();
-            lp.Show();
+            level = lvl;
+            IflEVEL();
+            InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private bool whatLevel()
         {
-
-            string constr = "Provider=Microsoft.ACE.OLEDB.16.0;Data Source=" + path;
-            OleDbConnection conn = new OleDbConnection(constr);
-
-
-            try
+            switch (level)
             {
-                string sql = "select * from course where Name like '"+pl+"'";
-
-                sql = string.Format(sql, pl);
-                OleDbDataAdapter sda = new OleDbDataAdapter(sql, conn);
-                DataSet ds = new DataSet();
+                case 1:
+                    level2.BackgroundImage = LevelLock;
+                    level3.BackgroundImage = LevelLock;
+                    level4.BackgroundImage = LevelLock;
+                    level5.BackgroundImage = LevelLock;
+                    return true;
+                case 2:
+                    level3.BackgroundImage = LevelLock;
+                    level4.BackgroundImage = LevelLock;
+                    level5.BackgroundImage = LevelLock;
+                    return true;
+                case 3:
+                    level4.BackgroundImage = LevelLock;
+                    level5.BackgroundImage = LevelLock;
+                    return true;
+                case 4:
+                    level5.BackgroundImage = LevelLock;
+                    return true;
             }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show("done" + ex.Message);
-            }
-          //  int po = pl.getpoint;
-        //    if(pl.)
-
-    }
-
-    private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-
+            return false;
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
             this.Hide();
-            lists f1 = new lists();
-            f1.Show();
+            lists ls = new lists();
+            ls.Show();
         }
 
         private void levels_Load(object sender, EventArgs e)
         {
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
+
+
+
+        }
+        private void level1_Click(object sender, EventArgs e)
+        {
+                GamerUpdate();
+        }
+
+        private void GamerUpdate()
+        {
+            button1.Visible = true;
+            button2.Visible = true;
+            button3.Visible = true;
+            button4.Visible = true;
+
+            label1.Visible = true;
+            label2.Visible = true;
+            label3.Visible = true;
+            label4.Visible = true;
+            label5.Visible = true;
+
+        }
+
+        public void IflEVEL()
+        {
+
+        }
+
+        private void level2_Click(object sender, EventArgs e)
+        {
+
+                GamerUpdate();
+
+        }
+
+        private void level3_Click(object sender, EventArgs e)
+        {
+
+                GamerUpdate();
+
+        }
+
+        private void level4_Click(object sender, EventArgs e)
+        {
+
+                GamerUpdate();
+        }
+
+        private void level5_Click(object sender, EventArgs e)
+        {
+                GamerUpdate();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 f = new Form1();
+            this.Hide();
+            f.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form2 f = new Form2();
+            this.Hide();
+            f.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form3 f = new Form3();
+            this.Hide();
+            f.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form4 f = new Form4();
+            this.Hide();
+            f.Show();
         }
     }
 }
